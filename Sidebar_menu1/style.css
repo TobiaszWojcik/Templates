@@ -1,0 +1,100 @@
+/* Main components */
+/* Navmenu button and nav sidebar */
+
+
+/* Main components */
+body{
+    padding:0;
+    margin:0;
+    background-color: lightgrey;
+
+    
+}
+nav{
+    --menu_weight:250px;
+    --menu_list_color1:white;
+    --menu_list_color2: lightgrey;
+}
+
+/* Navmenu button and nav sidebar */
+.bar1, .bar2, .bar3{
+    height: 6px;
+    width: 35px;
+    background-color: gray;
+    margin: 6px 0;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.click_menu .bar1{
+    transform:translate(calc(var(--menu_weight) - 0px), 12px) rotate(45deg) ;
+}
+.click_menu .bar3{
+    transform:translate(calc(var(--menu_weight) - 0px), -12px) rotate(-45deg) ;
+}
+.click_menu .bar2{
+    transform:translate(calc(var(--menu_weight) - 0px), 0) ;
+    opacity:0;
+}
+
+.click_menu .menu_list{
+    left:0px;
+}
+.click_menu{
+    
+}
+.menu_list{
+    font-family: Montserrat,Nunito,Roboto Mono;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: calc(-1*var(--menu_weight)); 
+    background-color:var(--menu_list_color1);
+    width: var(--menu_weight);
+    overflow:hidden;
+    transition: 0.2s;
+    height: 100%;
+}
+.menu_list .menu_menu{
+    margin: 0;
+    padding: 0;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.menu_list ul {
+    margin-top: 20px;
+    padding: 0px;
+    list-style:none;
+    
+}
+.menu_list ul li{
+    padding: 10px 0px;
+    list-style:none;
+    text-align:right;
+    width: 100%;
+    background-color: var(--menu_list_color1) ;
+    transition: 0.2s;
+}
+.menu_list ul li:hover{
+    
+    background-color: var(--menu_list_color2) ;
+}
+
+.menu_list ul li a{
+    width: 100%;
+    margin: 0 20px;
+    font-size: larger;
+    font-weight: 600;
+    text-transform:uppercase;
+    text-decoration: none;
+    color:rgb(36, 36, 36);
+    transition: 0.3s;
+}
+.menu_list ul li a:hover{
+    color: black;
+}
+
+
+
